@@ -1,0 +1,19 @@
+.Login{
+    width:100%;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 100px;
+    margin-top:100px;
+}
+
+h3 {
+    text-align: center;
+    margin: auto;
+}
+
+.click-button {
+    margin-top: 100px;
+}
