@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Foundation, {Row, Column, Button, Colors} from "react-foundation";
 import ReactDOM from "react-dom";
 import "./Login.css"
-import { Router, Route, Link } from "react-router";
+import {history} from "./index";
 import Ajax from "react-ajax";
 
 class Login extends Component {
@@ -37,13 +37,16 @@ class Login extends Component {
                                 <Button className="click-button">登陆</Button>
                             </Column>
                             <Column small={6}>
-                                <Button className="click-button">注册</Button>
+                                <Button className="click-button" onClick={this.jumpToRegister}>注册</Button>
                             </Column>
                         </Column>
                     </Row>
                 </Column>
             </div>
         );
+    }
+    jumpToRegister(){
+        history.push("/register")
     }
 }
 

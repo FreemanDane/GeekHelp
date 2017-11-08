@@ -1,6 +1,7 @@
 import "./Register.css"
 import React, { Component } from 'react';
 import Foundation, {Row, Column, Button} from "react-foundation";
+import {history} from "./index";
 
 
 class Register extends Component {
@@ -56,16 +57,19 @@ class Register extends Component {
                     <Row className="display">
                         <Column large={6} medium={8} small={10} centerOnLarge centerOnMedium centerOnSmall>
                             <Column small={6}>
-                                <Button className="click-button">登陆</Button>
+                                <Button className="click-button">确定</Button>
                             </Column>
                             <Column small={6}>
-                                <Button className="click-button">注册</Button>
+                                <Button className="click-button" onClick={this.jumpToLogin}>已有账号？</Button>
                             </Column>
                         </Column>
                     </Row>
                 </Column>
             </div>
         );
+    }
+    jumpToLogin(){
+        history.push("/login")
     }
 }
 
