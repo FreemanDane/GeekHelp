@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import Foundation, {Row, Column, Button} from "react-foundation";
+import Foundation, {Row, Column, Button, Colors} from "react-foundation";
 import ReactDOM from "react-dom";
 import "./Login.css"
 import { Router, Route, Link } from "react-router";
 import Ajax from "react-ajax";
-
-console.log(Foundation)
 
 class Login extends Component {
     render() {
