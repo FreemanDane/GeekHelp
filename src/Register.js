@@ -61,11 +61,8 @@ class Register extends Component {
                             <Column small={4} centerOnLarge centerOnSmall centerOnMedium>
                                 <Button className="click-button">确定</Button>
                             </Column>
-                            <Column small={6}>
+                            <Column small={6} centerOnLarge centerOnSmall centerOnMedium>
                                 <li><Link to="/login">已有账号？登陆</Link></li>
-                            </Column>
-                            <Column small={6}>
-                                <li><Link to="/login">忘记密码</Link></li>
                             </Column>
                         </Row>
                         </Column>
