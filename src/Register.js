@@ -1,5 +1,6 @@
 import "./Register.css"
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 import Foundation, {Row, Column, Button} from "react-foundation";
 import {history} from "./index";
 
@@ -56,20 +57,22 @@ class Register extends Component {
                     </Row>
                     <Row className="display">
                         <Column large={6} medium={8} small={10} centerOnLarge centerOnMedium centerOnSmall>
-                            <Column small={6}>
+                        <Row>
+                            <Column small={4} centerOnLarge centerOnSmall centerOnMedium>
                                 <Button className="click-button">确定</Button>
                             </Column>
                             <Column small={6}>
-                                <Button className="click-button" onClick={this.jumpToLogin}>已有账号？</Button>
+                                <li><Link to="/login">已有账号？登陆</Link></li>
                             </Column>
+                            <Column small={6}>
+                                <li><Link to="/login">忘记密码</Link></li>
+                            </Column>
+                        </Row>
                         </Column>
                     </Row>
                 </Column>
             </div>
         );
-    }
-    jumpToLogin(){
-        history.push("/login")
     }
 }
 
